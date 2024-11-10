@@ -12,6 +12,7 @@ const app = new Hono<{
 // Middleware
 
 // HTTP Methods
+app.get("/", (c) => c.text("This website as the backend for the Medium project."))
 app.route("/api/v1/user/", userRouter);
 app.route("/api/v1/blog", blogRouter);
 

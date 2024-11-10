@@ -1,8 +1,1 @@
-```
-npm install
-npm run dev
-```
-
-```
-npm run deploy
-```
+This backend is deployed at Cloudfare at https://backend.ayushgupta3902.workers.dev/
