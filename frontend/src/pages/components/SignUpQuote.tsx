@@ -4,7 +4,7 @@ const SignUpQuote = ({ quote }: { quote: string; }) => {
       <p className="text-2xl font-semibold mb-4">
         “{quote}”
       </p>
-      <footer className="text-sm font-medium">
+      <footer className="text-sm font-medium text-gray-400">
         Jules Winnfield <br />
         CEO, Acme Inc
       </footer>

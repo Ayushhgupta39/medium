@@ -1,3 +1,4 @@
 import SignUpQuote from './SignUpQuote';
+import Auth from './Auth';
 
-export { SignUpQuote }
+export { SignUpQuote, Auth }
