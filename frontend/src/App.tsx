@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Blog, Blogs, Signin, Signup } from "./pages";
+import { BlogPage, Blogs, Publish, Signin, Signup } from "./pages";
 
 function App() {
   return (
@@ -8,8 +8,9 @@ function App() {
         <Routes>
           <Route path="/signup" element={<Signup />} />
           <Route path="/signin" element={<Signin />} />
-          <Route path="/blog/:id" element={<Blog />} />
+          <Route path="/blog/:id" element={<BlogPage />} />
           <Route path="/blogs" element={<Blogs />} />
+          <Route path="/publish" element={<Publish />} />
         </Routes>
       </BrowserRouter>
     </div>

@@ -34,13 +34,14 @@ userRouter.post("/signup", async (c) => {
     const createdUser = await prisma.user.create({
       data: {
         name: body.name,
-        email: body.email,
+        email: body.username,
         password: body.password,
       },
     });
 
     const payload = {
-      sub: body.email,
+      id: createdUser.id,
+      sub: body.username,
       exp: Math.floor(Date.now() / 1000) + 60 * 60, // Token expires in 60 minutes
     };
     const secret = "mySecretKey";
@@ -78,7 +79,7 @@ userRouter.post("/signin", async (c) => {
   
       const user = await prisma.user.findFirst({
         where: {
-          email: body.email,
+          email: body.username,
           password: body.password,
         },
       });

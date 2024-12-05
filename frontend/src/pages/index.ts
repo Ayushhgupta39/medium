@@ -1,6 +1,7 @@
 import Signup from "./Signup";
 import Signin from "./Signin";
-import Blog from "./Blog";
 import Blogs from "./Blogs";
+import BlogPage from './Blog';
+import Publish from './Publish';
 
-export { Signup, Signin, Blog, Blogs };
+export { Signup, Signin, BlogPage, Blogs, Publish };

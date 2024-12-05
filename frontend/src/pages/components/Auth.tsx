@@ -11,7 +11,6 @@ const Auth = ({ type }: { type: "signup" | "signin" }) => {
   const navigate = useNavigate();
   const [postInputs, setPostInputs] = useState<SignUpInput>({
     username: "",
-    email: "",
     password: "",
     name: "",
   });
@@ -25,7 +24,7 @@ const Auth = ({ type }: { type: "signup" | "signin" }) => {
         `${BACKEND_URL}/api/v1/user/${type === "signup" ? "signup" : "signin"}`,
         postInputs
       );
-      const jwt = response.data.jwt;
+      const jwt = type === "signin" ? response.data.jwt : response.data.token;
       localStorage.setItem("token", jwt);
       navigate("/blogs");
     } catch (error) {
