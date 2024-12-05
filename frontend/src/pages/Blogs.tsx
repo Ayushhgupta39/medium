@@ -46,7 +46,6 @@ const Blogs = () => {
             description={blog.content}
             tags={["Side Hustle"]}
             readTime="3 min"
-            imageUrl="https://via.placeholder.com/150"
           />
           ))}
           </div>
